@@ -10,6 +10,10 @@ public class Player {
         this.point = point;
     }
 
+    public Player(String name, int point) {
+        this.name = name;
+        this.point = point;
+    }
 
     public void rename(String new_name) {
         name = new_name;
@@ -20,7 +24,8 @@ public class Player {
     }
 
     public void score() {
-        point++;
+        point += 1;
+        System.out.println("Счет игрока " + name + ": " + point);
     }
 }
 

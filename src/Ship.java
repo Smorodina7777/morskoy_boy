@@ -10,6 +10,11 @@ public class Ship {
         this.ship_title = ship_title;
     }
 
+    public Ship(byte ship_size, String ship_title) {
+        this.ship_size = ship_size;
+        this.ship_title = ship_title;
+    }
+
     public String get_title() {
         return ship_title;
     }
