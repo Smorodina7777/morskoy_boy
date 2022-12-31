@@ -7,8 +7,8 @@ public class Main {
 
         Ship ship1 = new Ship("Esminets");
         Ship ship2 = new Ship("Kater");
-        ship2.ship_size = 2;
-        ship1.ship_size = 1;
+        ship2.shipSize = 2;
+        ship1.shipSize = 1;
 
         player1.rename("Olya");
         player2.rename("Sveta");
@@ -20,8 +20,8 @@ public class Main {
         String shot2 = player2.shot(5, 8);
         System.out.println(shot2);
 
-        System.out.println(ship1.get_title() + " " + ship1.ship_size);
-        System.out.println(ship2.get_title() + " " + ship2.ship_size);
+        System.out.println(ship1.getTitle() + " " + ship1.getSize());
+        System.out.println(ship2.getTitle() + " " + ship2.getSize());
 
     }
 }

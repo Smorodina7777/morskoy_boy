@@ -15,8 +15,8 @@ public class Player {
         this.point = point;
     }
 
-    public void rename(String new_name) {
-        name = new_name;
+    public void rename(String newName) {
+        name = newName;
     }
 
     public String shot(int coord1, int coord2) {

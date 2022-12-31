@@ -1,25 +1,25 @@
 public class Ship {
-    byte ship_size;
-    String ship_title;
+    byte shipSize;
+    String shipTitle;
 
-    public Ship() {
-        this.ship_size = ship_size;
+    public Ship(byte shipSize) {
+        this.shipSize = shipSize;
     }
 
-    public Ship(String ship_title) {
-        this.ship_title = ship_title;
+    public Ship(String shipTitle) {
+        this.shipTitle = shipTitle;
     }
 
-    public Ship(byte ship_size, String ship_title) {
-        this.ship_size = ship_size;
-        this.ship_title = ship_title;
+    public Ship(byte shipSize, String shipTitle) {
+        this.shipSize = shipSize;
+        this.shipTitle = shipTitle;
     }
 
-    public String get_title() {
-        return ship_title;
+    public String getTitle() {
+        return shipTitle;
     }
 
-    public byte get_size() {
-        return ship_size;
+    public byte getSize() {
+        return shipSize;
     }
 }
