@@ -2,6 +2,7 @@ public class Player {
     String name;
     int point;
 
+
     public Player(String name) {
         this.name = name;
     }
@@ -13,6 +14,7 @@ public class Player {
     public Player(String name, int point) {
         this.name = name;
         this.point = point;
+        int[][]shipTitleCnt = {{Ship.kater, 4}, {Ship.esminets, 3}, {Ship.kreyser, 2}, {Ship.linkor, 1}};//массив кораблей
     }
 
     public void rename(String newName) {
