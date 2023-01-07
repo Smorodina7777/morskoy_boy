@@ -28,11 +28,16 @@ public class Main {
         System.out.println(ship2.getTitle() + " " + ship2.getSize());
 
         Area.missed(2, 4);
-        Area.destroyed(1, 2);
+        Area.destroyed(7, 2);
         Area.got(8, 5);
         Area.occupied(10, 10);
+        Area.occupied(1, 2);
+        Area.occupied(1, 3);
+        Area.occupied(1, 4);
+        Area.occupied(5, 5);
+        Area.occupied(6, 5);
         Area.status();
-
+        Area.countShips();
 
     }
 }
