@@ -1,16 +1,13 @@
 public class Area {
-    static int[][] field = new int[10][10];
+    int[][] field = new int[10][10];
     Player player;
-
-
+    static int[] rule = new int[]{4, 3, 2, 1}; //правила игры
     Area(Player player) {
         this.player = player;
     }
 
-    static int[] rule = new int[]{4, 3, 2, 1, 0}; //правила игры
-
     //подсчет количества кораблей
-    static void countShips() {
+   /* static void countShips() {
         int cnt1 = 0;
         int cnt2 = 0;
         int cnt3 = 0;
@@ -147,25 +144,30 @@ public class Area {
         System.out.println("Linkor - "+cnt4);
 
     }
-
-
-    static void occupied(int coord1, int coord2) {
-        field[coord1 - 1][coord2 - 1] = 1;
+*/
+    static int countShip(){
+        int result = 0;
+        for (int i=0; i<rule.length; i++){
+            result+=rule[i];
+        }
+        return result;
+    }
+       void occupied(int coord1, int coord2) { //поставить корабль
+        field[coord1][coord2] = 1;
     }
 
-    static void missed(int coord1, int coord2) {
-        field[coord1 - 1][coord2 - 1] = 2;
+    void missed(int coord1, int coord2) {//мимо
+        field[coord1][coord2] = 2;
     }
 
-    static void got(int coord1, int coord2) {
-        field[coord1 - 1][coord2 - 1] = 3;
+    void got(int coord1, int coord2) {//попал
+        field[coord1][coord2] = 3;
+    }
+    void destroyed(int coord1, int coord2) {//убит
+        field[coord1][coord2] = 4;
     }
 
-    static void destroyed(int coord1, int coord2) {
-        field[coord1 - 1][coord2 - 1] = 4;
-    }
-
-    static void status() {
+    void status() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 System.out.print(field[i][j] + "  ");

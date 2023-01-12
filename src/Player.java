@@ -1,20 +1,24 @@
 public class Player {
     String name;
     int point;
+    Ship[] shipList;
+    Area area;
 
 
     public Player(String name) {
         this.name = name;
+        shipList = new Ship[Area.countShip()];//массив кораблей
     }
 
     public Player(int point) {
         this.point = point;
+        shipList = new Ship[Area.countShip()];//массив кораблей
     }
 
     public Player(String name, int point) {
         this.name = name;
         this.point = point;
-        int[][]shipTitleCnt = {{Ship.kater, 4}, {Ship.esminets, 3}, {Ship.kreyser, 2}, {Ship.linkor, 1}};//массив кораблей
+        shipList = new Ship[Area.countShip()];//массив кораблей
     }
 
     public void rename(String newName) {
@@ -28,6 +32,10 @@ public class Player {
     public void score() {
         point += 1;
         System.out.println("Счет игрока " + name + ": " + point);
+    }
+
+    public void setArea(Area area) {
+        this.area = area;
     }
 }
 

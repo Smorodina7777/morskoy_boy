@@ -7,6 +7,9 @@ public class Main {
         Area field1 = new Area(player1);
         Area field2 = new Area(player2);
 
+        player1.setArea(field1);
+        player2.setArea(field2);
+
 
         Ship ship1 = new Ship("Esminets", player1);
         Ship ship2 = new Ship("Kater", player1);
@@ -27,17 +30,17 @@ public class Main {
         System.out.println(ship1.getTitle() + " " + ship1.getSize());
         System.out.println(ship2.getTitle() + " " + ship2.getSize());
 
-        Area.missed(2, 4);
-        Area.destroyed(7, 2);
-        Area.got(8, 5);
-        Area.occupied(10, 10);
-        Area.occupied(1, 2);
-        Area.occupied(1, 3);
-        Area.occupied(1, 4);
-        Area.occupied(5, 5);
-        Area.occupied(6, 5);
-        Area.status();
-        Area.countShips();
+        player1.area.missed(2, 4);
+        player1.area.destroyed(7, 2);
+        player1.area.got(8, 5);
+        player1.area.occupied(9, 9);
+        player1.area.occupied(1, 2);
+        player1.area.occupied(1, 3);
+        player1.area.occupied(1, 4);
+        player1.area.occupied(5, 5);
+        player1.area.occupied(6, 5);
+        player1.area.status();
+        player1.area.countShip();
 
     }
 }
