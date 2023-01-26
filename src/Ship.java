@@ -2,10 +2,11 @@ public class Ship {
     byte shipSize;
     String shipTitle;
     // размеры кораблей
-    static String esminets2 = "Esminets";
-    static String kater1 = "Kater";
-    static String linkor4 ="Linkor";
-    static String kreyser3 = "Kreyser";
+    static String esminets2 = ShipTypes.ESMINETS.getTitle();
+    static String kater1 = ShipTypes.KATER.getTitle();
+    static String linkor4 =ShipTypes.LINKOR.getTitle();
+    static String kreyser3 = ShipTypes.KREYSER.getTitle();
+
     private Player name;
 
     public Ship(byte shipSize, Player name) {
